@@ -28,7 +28,7 @@ class AuthController extends Controller
                 }
                 else{
                     $token = $user->createToken('auth_token')->plainTextToken;
-                    return response()->json(['status'=>1,'token' => $token], 200);
+                    return response()->json(['status'=>1,'token' => $token,'message'=>'Welcome'], 200);
                 }
             }
             else{
