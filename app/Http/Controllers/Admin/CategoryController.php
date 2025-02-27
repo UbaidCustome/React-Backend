@@ -66,5 +66,4 @@ class CategoryController extends Controller
         $record->delete();
         return response()->json(['status'=>1,'message'=>'Category deleted successfully'], 200);
     }
-
 }
