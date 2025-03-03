@@ -11,10 +11,11 @@ Route::post('/admin/login', 'App\Http\Controllers\Admin\AuthController@authentic
 
 Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::resource('/admin/categories', 'App\Http\Controllers\Admin\CategoryController');
-    Route::resource('/admin/products', 'App\Http\Controllers\ProductController');
+    Route::resource('/admin/products', 'App\Http\Controllers\Admin\ProductController');
     Route::resource('/admin/orders', 'App\Http\Controllers\OrderController');
     Route::resource('/users', 'App\Http\Controllers\UserController');
     Route::resource('/admin/brands', 'App\Http\Controllers\Admin\BrandController');
+    Route::resource('/admin/size', 'App\Http\Controllers\Admin\SizeController');
     Route::post('/admin/logout', 'App\Http\Controllers\Admin\AuthController@logout');
 
     Route::get('/user', 'App\Http\Controllers\Admin\AuthController@user');
