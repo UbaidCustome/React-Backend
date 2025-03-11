@@ -21,4 +21,8 @@ class Product extends Model
         'status',
         'is_featured',
     ];
+    public function images()
+    {
+        return $this->hasMany(Product_image::class);
+    }
 }
